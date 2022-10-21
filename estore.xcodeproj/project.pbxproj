@@ -10,6 +10,9 @@
 		3F4AD92928FD84FD001DA1B1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4AD92828FD84FD001DA1B1 /* Product.swift */; };
 		3F4AD92B28FD8609001DA1B1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4AD92A28FD8609001DA1B1 /* API.swift */; };
 		3F4AD971290033D3001DA1B1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4AD970290033D3001DA1B1 /* TableViewCell.swift */; };
+		3F4AD9732902D45C001DA1B1 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4AD9722902D45C001DA1B1 /* APIEndPoint.swift */; };
+		3F4AD9752902D4D3001DA1B1 /* HTTPSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4AD9742902D4D3001DA1B1 /* HTTPSessionProtocol.swift */; };
+		3F4AD9782902DED8001DA1B1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4AD9772902DED8001DA1B1 /* SDWebImage */; };
 		3FE1923928F99D6C006AA6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1923828F99D6C006AA6C0 /* AppDelegate.swift */; };
 		3FE1923B28F99D6C006AA6C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1923A28F99D6C006AA6C0 /* SceneDelegate.swift */; };
 		3FE1923D28F99D6C006AA6C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1923C28F99D6C006AA6C0 /* ViewController.swift */; };
@@ -42,6 +45,8 @@
 		3F4AD92828FD84FD001DA1B1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3F4AD92A28FD8609001DA1B1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3F4AD970290033D3001DA1B1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3F4AD9722902D45C001DA1B1 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		3F4AD9742902D4D3001DA1B1 /* HTTPSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSessionProtocol.swift; sourceTree = "<group>"; };
 		3FE1923528F99D6C006AA6C0 /* estore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = estore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE1923828F99D6C006AA6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE1923A28F99D6C006AA6C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4AD9782902DED8001DA1B1 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				3F4AD92A28FD8609001DA1B1 /* API.swift */,
+				3F4AD9722902D45C001DA1B1 /* APIEndPoint.swift */,
+				3F4AD9742902D4D3001DA1B1 /* HTTPSessionProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +193,9 @@
 			dependencies = (
 			);
 			name = estore;
+			packageProductDependencies = (
+				3F4AD9772902DED8001DA1B1 /* SDWebImage */,
+			);
 			productName = estore;
 			productReference = 3FE1923528F99D6C006AA6C0 /* estore.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 3FE1922C28F99D6C006AA6C0;
+			packageReferences = (
+				3F4AD9762902DED8001DA1B1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 3FE1923628F99D6C006AA6C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,12 +334,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE1923D28F99D6C006AA6C0 /* ViewController.swift in Sources */,
+				3F4AD9752902D4D3001DA1B1 /* HTTPSessionProtocol.swift in Sources */,
 				3FE1924328F99D6C006AA6C0 /* estore.xcdatamodeld in Sources */,
 				3F4AD92928FD84FD001DA1B1 /* Product.swift in Sources */,
 				3FE1923928F99D6C006AA6C0 /* AppDelegate.swift in Sources */,
 				3F4AD92B28FD8609001DA1B1 /* API.swift in Sources */,
 				3F4AD971290033D3001DA1B1 /* TableViewCell.swift in Sources */,
 				3FE1923B28F99D6C006AA6C0 /* SceneDelegate.swift in Sources */,
+				3F4AD9732902D45C001DA1B1 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F4AD9762902DED8001DA1B1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F4AD9772902DED8001DA1B1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F4AD9762902DED8001DA1B1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3FE1924128F99D6C006AA6C0 /* estore.xcdatamodeld */ = {

@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct Product: Codable {
+public struct ArrayProduct: Decodable {
+    var product: [Product]
+}
 
-    var id: UUID
-    var title: String?
-    var price: String
-    var categories: String?
-    var description: String?
-    var image: URL?
+public struct Product: Decodable {
+
+    var id: Int
+    var title: String
+    var price: Float
+    var category: String
+    var description: String
+    var image: String
 }
